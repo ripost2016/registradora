@@ -1,0 +1,33 @@
+<div class="comanda p-2">
+  <h2>COMANDA</h2>
+
+  <table class="table table-sm table-striped">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of comanda; let i = index">
+        <td> {{ p.producto.nombre }} </td>
+        <td> {{ p.cantidad }} </td>
+        <td> {{ p.calcularTotal() }} </td>
+        <td><i (click) = "handleTrash(i)" class="fas fa-trash"></i></td>
+        <td><input (change)="handleInputChange(i)" [(ngModel)]="p.cantidad" class="form-control" type="number" min="0" /></td>
+        <!-- <td><i (click) = "handleInputTrash(i)" class="fas fa-trash"></i></td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<table class="total table table-sm table-light table-bordered">
+  <tr>
+    <td>TOTAL</td>
+    <td class ="text-right">€ {{ calcularComanda() }} </td>
+  </tr>
+</table>

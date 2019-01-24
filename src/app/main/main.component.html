@@ -1,0 +1,18 @@
+<header class="bg-dark">
+  <div class="logo"></div>
+  <h2>TPV CAFETERIA</h2>
+</header>
+
+<main class="container">
+  <div class="row">
+    <div class="col-7">
+      <app-productos [titulo]="'COMIDA'" [productos]="arrComida" (envProducto)="handleEnvProducto($event)" ></app-productos>
+
+      <app-productos [titulo]="'BEBIDA'" [productos]="arrBebida" (envProducto)="handleEnvProducto($event)" ></app-productos>
+    </div>
+
+    <div class="col-5">
+      <app-lista class="sticky-top" [comanda] = "comanda" (evLineaComanda) = "handleEvLineaComanda($event)" ></app-lista>
+    </div>
+  </div>
+</main>

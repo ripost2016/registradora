@@ -1,0 +1,26 @@
+.comanda {
+  min-height: 400px;
+  max-height: 600px;
+  /* position: relative; */
+  overflow: auto;
+  background-color: rgba(52, 58, 64, 0.1);
+}
+
+th, td {
+  font-size: .9em;
+}
+
+.form-control {
+	/* display: block; */
+	width: 4.5em;
+	height: auto;
+	padding: .375rem .35rem;
+	font-size: .9em;
+	/* line-height: 1.5; */
+	color: black;
+	/* background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
+}
